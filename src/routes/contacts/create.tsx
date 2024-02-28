@@ -83,6 +83,17 @@ export const ContactCreatePage: React.FC<PropsWithChildren> = ({
             <Input />
           </Form.Item>
           <Form.Item
+            label="Telefone"
+            name="phone"
+            rules={[
+              {
+                required: true,
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
             label="Company"
             name="companyId"
             rules={[
