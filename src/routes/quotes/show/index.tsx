@@ -9,6 +9,8 @@ import { Button, Space } from "antd";
 import { CustomAvatar, FullScreenLoading, Text } from "@/components";
 import { Quote } from "@/graphql/schema.types";
 
+import A4 from '../components/A4/A4'; // Atualize o caminho conforme necessário
+
 import {
   ProductsServices,
   QuotesFormModal,
@@ -107,6 +109,8 @@ export const QuotesShowPage = () => {
           <ShowDescription />
         </div>
       </div>
+      
+
       {visible && (
         <QuotesFormModal
           action={"edit"}
@@ -115,6 +119,8 @@ export const QuotesShowPage = () => {
           onMutationSuccess={() => close()}
         />
       )}
+      
     </>
+    
   );
 };

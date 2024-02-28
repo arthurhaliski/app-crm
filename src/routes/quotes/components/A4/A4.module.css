@@ -1,0 +1,400 @@
+.lindtCatuai {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+.shmvConstrutora {
+  margin: 0;
+  font-weight: 500;
+}
+.attGustavo {
+  margin: 0;
+  color: var(--color-darkgray-100);
+}
+.shmvConstrutoraAttContainer {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.fone {
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+}
+.departamento,
+.fone {
+  font-weight: 500;
+}
+.engenharia {
+  font-family: var(--font-poppins);
+  color: var(--color-darkgray-100);
+}
+.departamentoEngenharia {
+  margin: 0;
+  color: var(--color-white);
+}
+.refernciaProjetoEstrutura {
+  margin: 0;
+}
+.fone11998140787Container {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.02em;
+  color: var(--color-darkgray-100);
+}
+.lindtCatuaiShoppingMariParent {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px 0;
+}
+.detalhesDoOramento {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.span {
+  color: var(--color-darkgray-100);
+}
+.detalhesDoOramentoParent,
+.nOramento20292023Parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-smi);
+}
+.detalhesDoOramentoParent {
+  gap: 15px 0;
+  font-size: var(--font-size-sm);
+}
+.frameChild {
+  width: 52px;
+  position: relative;
+  border-top: 2px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  height: 2px;
+}
+.ineditaPeasMetalrgicasContainer {
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.ineditaPeasMetalrgicasAttParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 11px 0;
+}
+.contato {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+.contatoWrapper {
+  width: 136px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-sm);
+}
+.endereo {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-white);
+}
+.frameGroup,
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameGroup {
+  padding: var(--padding-xl) 0;
+  gap: 22px 0;
+}
+.frameParent {
+  flex: 1;
+  gap: 30px 0;
+}
+.a46Inner,
+.frameWrapper {
+  min-height: 1250px;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+.frameWrapper {
+  width: 333px;
+  background-color: var(--color-black);
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--padding-61xl) 40px 0;
+  box-sizing: border-box;
+}
+.a46Inner {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.oramento {
+  position: relative;
+  font-weight: 600;
+}
+.frameItem {
+  width: 50.9px;
+  position: relative;
+  border-top: 2px solid var(--color-gray-200);
+  box-sizing: border-box;
+  height: 2px;
+}
+.oramentoParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px 0;
+}
+.vectorIcon {
+  width: 294px;
+  position: relative;
+  height: 38px;
+}
+.topo {
+    width: 723px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 100px;
+
+}
+.total {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-align: right;
+}
+.header,
+.razoParent {
+  display: flex;
+  flex-direction: row;
+}
+.razoParent {
+  flex: 1 1;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  left: 764px;
+}
+
+.razoParent2 {
+  flex: 1 1;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  left: 855px;
+}
+.header {
+  align-self: stretch;
+  background-color: #e4e4e4;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 11px;
+  gap: 0 144px;
+}
+.subTotalChild {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  height: 1px;
+}
+.r5000000 {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  text-align: right;
+}
+.subTotalParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0 490px;
+}
+.frete {
+  width: 121px;
+  position: relative;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  display: inline-block;
+  height: 19.9px;
+  flex-shrink: 0;
+}
+.frameContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px 0;
+}
+.r5750000,
+.total1 {
+  position: relative;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.r5750000 {
+  flex: 1;
+  font-size: var(--font-size-sm-3);
+  text-align: right;
+}
+.totalParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0 459px;
+}
+.lineParent {
+  align-self: stretch;
+  gap: 12px 0;
+  font-size: var(--font-size-lg);
+}
+.lineParent,
+.orcamento,
+.subTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.subTotal {
+  align-self: stretch;
+  gap: 21px 0;
+  font-size: var(--font-size-sm-3);
+}
+.orcamento {
+  width: 743px;
+  overflow: hidden;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+  gap: 10px 0;
+  font-size: var(--font-size-sm);
+}
+.condiesGeraisDe,
+.formaDePagamento {
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.condiesGeraisDe {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-gray-200);
+}
+.formaDePagamento {
+  width: 674px;
+  display: inline-block;
+}
+.condiesGeraisDeVendaParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px 0;
+}
+.frameChild1 {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.02em;
+}
+.deepakparallelconnectcom,
+.wwwparallelconnectcom {
+  position: absolute;
+  top: 0;
+  left: 31.22%;
+  letter-spacing: 0.02em;
+}
+.wwwparallelconnectcom {
+  left: 74.08%;
+}
+.component1 {
+  width: 679px;
+  position: relative;
+  height: 20px;
+  font-size: var(--font-size-smi);
+  color: var(--color-darkgray-200);
+}
+.frameDiv {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px 0;
+  font-size: var(--font-size-sm-3);
+  color: var(--color-gray-100);
+}
+.a46,
+.frameDiv,
+.orcamentogeral {
+  display: flex;
+  justify-content: flex-start;
+}
+.orcamentogeral {
+  flex-direction: column;
+  align-items: center;
+  padding: 70px var(--padding-xl) var(--padding-61xl) 0;
+  gap: 80px 0;
+  font-size: 45px;
+  color: var(--color-gray-200);
+}
+.a46 {
+  min-height: 1250px;
+  display: flex;
+  position: relative;
+  background-color: #f9f9f9;
+  width: 1120px;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0 20px;
+  text-align: left;
+  font-size: var(--font-size-smi);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .noprint {
+    display: none;
+  }
+/* Ajustes adicionais para otimizar a impressão */
+}
+

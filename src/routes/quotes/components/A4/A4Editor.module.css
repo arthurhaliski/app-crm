@@ -1,0 +1,218 @@
+.fullPage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.settings {
+  width: fit-content;
+  font-family: var(--font-poppins);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 20px;
+}
+
+.part1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-content: center;
+  justify-content: center;
+}
+
+.part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, button.roundedButton, button.roundedButton1, button.roundedButton2 {
+  padding: 8px;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Adiciona bordas arredondadas */
+  outline: none;
+}
+
+button.roundedButton {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button.roundedButton:hover {
+  background-color: #3192fa;
+}
+
+button.roundedButton1 {
+  cursor: pointer;
+  background-color: #ffd900;
+  color: rgb(0, 0, 0)5, 40, 40;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button.roundedButton1:hover {
+  background-color: #ffe65a;
+}
+
+button.roundedButton2 {
+  cursor: pointer;
+  background-color: #ff0000;
+  color: rgb(0, 0, 0)5, 40, 40;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button.roundedButton2:hover {
+  background-color: #ff5a5a;
+}
+
+label {
+  font-weight: bold;
+}
+
+.itemList {
+  width: 850px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemList button {
+  margin-left: 10px;
+  border-radius: 10px; /* Arredonda os botões dentro da lista de itens */
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.box input {
+  width: 300px;
+  text-align: center;
+  font-family: 'Poppins';
+
+}
+.box select {
+  border-radius: 10px; /* Cantos arredondados */
+  border: 1px solid #ccc; /* Borda cinza claro */
+  padding: 5px; /* Espaçamento interno */
+  width: 100%; /* Ajusta a largura dentro do container */
+  height: 38px;
+  /* Adicione mais estilos conforme necessário */
+}
+
+.descriptionfull {
+
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 textarea {
+  border-radius: 10px; /* Ajuste este valor conforme necessário */
+  /* Adicione mais estilos aqui conforme necessário */
+  padding: 8px; /* Espaçamento interno para melhor visualização */
+  border: 1px solid #ccc; /* Cor e estilo da borda */
+  outline: none; /* Remove o contorno ao focar */
+  width: 100%; /* Ajusta a largura dentro do container */
+  font-family: 'Poppins';
+}
+
+.box3 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.box3 textarea {
+  border-radius: 10px; /* Ajuste este valor conforme necessário */
+  /* Adicione mais estilos aqui conforme necessário */
+  padding: 8px; /* Espaçamento interno para melhor visualização */
+  border: 1px solid #ccc; /* Cor e estilo da borda */
+  outline: none; /* Remove o contorno ao focar */
+  width: 300px; /* Ajusta a largura dentro do container */
+  font-family: 'Poppins';
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.titulofont {
+  font-weight: 600;
+  font-size: 24px;
+
+}
+
+.parte1orcamento {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.parte2orcamento {
+  gap: 30px;
+  display: flex;
+  
+}
+
+.parte1detalhes {
+  display: flex;
+  width: -webkit-fill-available;
+  align-items: center;
+  justify-content: center;
+}
+
+.parte2detalhes {
+  width: max-content;
+  display: flex;
+  gap: 40px;
+}
+
+.pageBreak {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+}
+
+@media print {
+  .pageBreak {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+  }
+}
