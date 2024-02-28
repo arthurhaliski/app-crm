@@ -1,77 +1,42 @@
-import React, { useState, useRef, useEffect, useCallback  } from 'react';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-import Item from "./A4/components/Item";
-import styles from "./A4/A4.module.css";
-import { Button, Modal } from "antd";
-import { FilePdfOutlined } from "@ant-design/icons";
-import { useOne } from "@refinedev/core";
-import { useParams } from "react-router-dom";
+import React, { useRef, useEffect, ForwardedRef } from 'react';
+import Item from "../components/Item";
+import styles from "./A4.module.css";
 
-import { QuotesGetQuoteQuery } from "@/graphql/types";
-import { currencyNumber } from "@/utilities";
+interface Item {
+  itemNome: string;
+  descricao: string;
+  razao: string;
+  quantidade: number;
+}
 
-import { QUOTES_GET_QUOTE_QUERY } from "../queries";
+interface A4Props {
+  nomeObra: string;
+  nomeConstrutora: string;
+  nomeResponsavel: string;
+  telefoneResponsavel: string;
+  nomeReferencia: string;
+  itens: Item[];
+  valorFrete: string;
+  valorDeslocamento: string;
+  formaPagamento: string;
+  prazoEntrega: string;
+}
 
+const A4 = React.forwardRef(({
+  nomeObra,
+  nomeConstrutora,
+  nomeResponsavel,
+  telefoneResponsavel,
+  nomeReferencia,
+  itens = [],
+  valorFrete,
+  valorDeslocamento,
+  formaPagamento,
+  prazoEntrega
+}: A4Props, ref: ForwardedRef<HTMLDivElement>) => {
 
-const A4 = ({
-}) => {
-  const [nomeObra, setNomeObra] = useState('');
-  const [nomeConstrutora, setNomeConstrutora] = useState('');
-  const [nomeResponsavel, setNomeResponsavel] = useState('');
-  const [telefoneResponsavel, setTelefoneResponsavel] = useState('');
-  const [nomeReferencia, setNomeReferencia] = useState('');
-  const [itens, setItens] = useState([]);
-  
-  // Estados para as propriedades do item a ser adicionado ou editado
-  const [itemNome, setItemNome] = useState('');
-  const [descricao, setDescricao] = useState('');
-  const [valor, setValor] = useState('');
-  const [unidade, setUnidade] = useState('m²');
-  const [razao, setRazao] = useState('');
-  const [quantidade, setQuantidade] = useState('');
-  const [editandoIndex, setEditandoIndex] = useState(-1); // Novo estado para rastrear o índice do item sendo editado
-
-  //Detalhes Finais
-  const [valorFrete, setFrete] = useState('0');
-  const [valorDeslocamento, setDeslocamento] = useState('0');
-  const [formaPagamento, setFormaDePagamento] = useState('');
-  const [prazoEntrega, setPrazo] = useState('');
-  
-  // Nome do arquivo do orçamento
-  const nomeOrcamento = nomeObra ? `Orçamento ${nomeObra}.pdf` : 'Orçamento.pdf';
-      // Gera um número aleatório entre 99 e 9999
-  const numeroOrcamento = Math.floor(Math.random() * (9999 - 99 + 1)) + 99;
-
-      // Obtém a data atual no formato dd/mm/yyyy
-  const dataAtual = new Date().toLocaleDateString('pt-BR');
-  
-
-  const pdfRef = useRef();
-  
-  const params = useParams<{ id: string }>();
-
-  const orcamentoRef = useRef(null);
-  const a46InnerRef = useRef(null);
-  const [isModalVisible, setIsModalVisible] = useState(false); // Estado para controlar a visibilidade do modal
-
-  const showPDFPreview = () => {
-    setIsModalVisible(true); // Mostra o modal ao invés de gerar o PDF diretamente
-  };
-
-  const handleSavePDF = () => {
-    html2canvas(pdfRef.current, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'pt',
-        format: [canvas.width, canvas.height]
-      });
-      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-      pdf.save(`${nomeObra || "Orçamento"}.pdf`);
-      setIsModalVisible(false); // Fecha o modal após salvar o PDF
-    });
-  };
+  const orcamentoRef = useRef<HTMLDivElement>(null);
+  const a46InnerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(entries => {
@@ -92,25 +57,12 @@ const A4 = ({
     };
   }, []);
 
-  const generatePDF = () => {
-    html2canvas(pdfRef.current, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'pt',
-        format: [canvas.width, canvas.height]
-      });
-      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-      pdf.save(`${nomeObra || "Orçamento"}.pdf`);
-    });
-  };
-
-  const extrairValor = (razao) => {
+  const extrairValor = (razao: string): number => {
     const valor = razao.match(/R\$(\d+(?:\.\d+)?)/);
     return valor ? parseFloat(valor[1]) : 0;
   };
 
-  const calcularSubtotal = () => {
+  const calcularSubtotal = (): number => {
     return itens.reduce((subtotal, item) => {
       const valorItem = extrairValor(item.razao) * item.quantidade;
       return subtotal + valorItem;
@@ -121,55 +73,22 @@ const A4 = ({
   const frete = parseFloat(valorFrete);
   const deslocamento = parseFloat(valorDeslocamento);
   const totalGeral = subtotal + frete + deslocamento;
-  const { data, isLoading, isFetching, refetch } = useOne<
-    GetFields<QuotesGetQuoteQuery>
-  >({
-    resource: "quotes",
-    id: params.id,
-    liveMode: "off",
-    meta: {
-      gqlQuery: QUOTES_GET_QUOTE_QUERY,
-    },
-  });
-  const {
-    title,
-    tax,
-    total,
-    subTotal,
-    items,
-    description,
-    company,
-    contact,
-    salesOwner,
-  } = data?.data || {};
+
+  const numeroOrcamento = Math.floor(Math.random() * (9999 - 99 + 1)) + 99;
+  const dataAtual = new Date().toLocaleDateString('pt-BR');
+
   return (
-    <div>
-      {/* Botão para gerar PDF */}
-      <Button onClick={showPDFPreview} type="primary" icon={<FilePdfOutlined />}>
-        Visualizar Orçamento
-      </Button>
-
-      <Modal
-        title="Pré-visualização do PDF"
-        visible={isModalVisible}
-        onOk={handleSavePDF}
-        onCancel={() => setIsModalVisible(false)}
-        okText="Salvar PDF"
-        cancelText="Cancelar"
-      >
-        <p>Confira a pré-visualização do PDF antes de salvar.</p>
-
-        <div ref={pdfRef} className={styles.a46}>
+    <div ref={ref} className={styles.a46}>
       <div ref={a46InnerRef} className={styles.a46Inner}>
         <div className={styles.frameWrapper}>
           <div className={styles.frameParent}>
             <div className={styles.lindtCatuaiShoppingMariParent}>
               <div className={styles.lindtCatuai}>
-                {title}
+                {nomeObra}
               </div>
               <div className={styles.shmvConstrutoraAttContainer}>
                 <p className={styles.shmvConstrutora}>{nomeConstrutora}</p>
-                <p className={styles.attGustavo}>Att: {company?.name}</p>
+                <p className={styles.attGustavo}>Att: {nomeResponsavel}</p>
               </div>
               <div className={styles.fone11998140787Container}>
                 <p className={styles.refernciaProjetoEstrutura}>
@@ -333,12 +252,8 @@ const A4 = ({
           </div>
         </div>
       </div>
-    </div>      
-      </Modal>
-      {/* Refatoração do componente A4 para incluir ref={pdfRef} */}
-
     </div>
   );
-};
+});
 
 export default A4;

@@ -1,218 +1,119 @@
-.fullPage {
+.lindtCatuai {
+  align-self: stretch;
+  position: relative;
+  font-size: 14px; /* --font-size-sm */
+  font-weight: 500;
+}
+.shmvConstrutora, .departamento, .fone, .departamentoEngenharia {
+  margin: 0;
+  font-weight: 500;
+}
+.attGustavo, .engenharia, .fone11998140787Container, .span, .frameChild, .contato {
+  margin: 0;
+  color: #a6a6a6; /* --color-darkgray-100 */
+}
+.shmvConstrutoraAttContainer, .lindtCatuaiShoppingMariParent, .ineditaPeasMetalrgicasContainer {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.fone, .engenharia {
+  font-family: Poppins; /* --font-poppins */
+  color: #fff; /* --color-white for .fone and --color-darkgray-100 for .engenharia */
+}
+.detalhesDoOramento, .total, .condiesGeraisDe {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.detalhesDoOramentoParent, .nOramento20292023Parent, .ineditaPeasMetalrgicasAttParent, .oramentoParent, .condiesGeraisDeVendaParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.detalhesDoOramentoParent {
+  gap: 15px 0;
+  font-size: 14px; /* --font-size-sm */
+}
+.frameGroup, .frameParent, .lineParent, .orcamento, .subTotal {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameGroup {
+  padding: 20px 0; /* --padding-xl */
+  gap: 22px 0;
+}
+.frameParent {
+  flex: 1;
+  gap: 30px 0;
+}
+.a46Inner, .frameWrapper, .a46, .frameDiv, .orcamentogeral {
+  display: flex;
+  justify-content: flex-start;
+}
+.frameWrapper {
+  width: 333px;
+  background-color: #000; /* --color-black */
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: center;
+  padding: 80px 40px 0; /* --padding-61xl and 40px */
+  box-sizing: border-box;
+}
+.frameItem, .subTotalChild, .frameChild1 {
+  position: relative;
+  border-top: 2px solid #a6a6a6; /* --color-darkgray-100 for .frameItem and .frameChild1 */
+  box-sizing: border-box;
+  height: 2px;
+}
+.r5750000, .total1, .frete, .r5000000 {
+  position: relative;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.r5750000 {
+  flex: 1;
+  font-size: 13.3px; /* --font-size-sm-3 */
+  text-align: right;
+}
+.totalParent, .subTotalParent {
+  align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: flex-start;
 }
-
-.settings {
-  width: fit-content;
-  font-family: var(--font-poppins);
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  padding: 20px;
-}
-
-.part1 {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-content: center;
-  justify-content: center;
-}
-
-.part2 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-input, button.roundedButton, button.roundedButton1, button.roundedButton2 {
-  padding: 8px;
-  margin-top: 2px;
-  border: 1px solid #ccc;
-  border-radius: 20px; /* Adiciona bordas arredondadas */
-  outline: none;
-}
-
-button.roundedButton {
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-button.roundedButton:hover {
-  background-color: #3192fa;
-}
-
-button.roundedButton1 {
-  cursor: pointer;
-  background-color: #ffd900;
-  color: rgb(0, 0, 0)5, 40, 40;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-button.roundedButton1:hover {
-  background-color: #ffe65a;
-}
-
-button.roundedButton2 {
-  cursor: pointer;
-  background-color: #ff0000;
-  color: rgb(0, 0, 0)5, 40, 40;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-button.roundedButton2:hover {
-  background-color: #ff5a5a;
-}
-
-label {
-  font-weight: bold;
-}
-
-.itemList {
-  width: 850px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.itemList button {
-  margin-left: 10px;
-  border-radius: 10px; /* Arredonda os botões dentro da lista de itens */
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.box input {
-  width: 300px;
-  text-align: center;
-  font-family: 'Poppins';
-
-}
-.box select {
-  border-radius: 10px; /* Cantos arredondados */
-  border: 1px solid #ccc; /* Borda cinza claro */
-  padding: 5px; /* Espaçamento interno */
-  width: 100%; /* Ajusta a largura dentro do container */
-  height: 38px;
-  /* Adicione mais estilos conforme necessário */
-}
-
-.descriptionfull {
-
-}
-
-.box2 {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.box2 textarea {
-  border-radius: 10px; /* Ajuste este valor conforme necessário */
-  /* Adicione mais estilos aqui conforme necessário */
-  padding: 8px; /* Espaçamento interno para melhor visualização */
-  border: 1px solid #ccc; /* Cor e estilo da borda */
-  outline: none; /* Remove o contorno ao focar */
-  width: 100%; /* Ajusta a largura dentro do container */
-  font-family: 'Poppins';
-}
-
-.box3 {
+.header, .razoParent, .razoParent2 {
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
 }
-
-.box3 textarea {
-  border-radius: 10px; /* Ajuste este valor conforme necessário */
-  /* Adicione mais estilos aqui conforme necessário */
-  padding: 8px; /* Espaçamento interno para melhor visualização */
-  border: 1px solid #ccc; /* Cor e estilo da borda */
-  outline: none; /* Remove o contorno ao focar */
-  width: 300px; /* Ajusta a largura dentro do container */
-  font-family: 'Poppins';
+.header {
+  align-self: stretch;
+  background-color: #e4e4e4;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 11px;
 }
-
-.titulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+.formaDePagamento {
+  position: relative;
+  letter-spacing: 0.02em;
+  width: 674px;
+  display: inline-block;
 }
-.titulofont {
-  font-weight: 600;
-  font-size: 24px;
-
+.component1, .deepakparallelconnectcom, .wwwparallelconnectcom {
+  position: absolute;
+  top: 0;
+  letter-spacing: 0.02em;
 }
-
-.parte1orcamento {
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-
+.deepakparallelconnectcom {
+  left: 31.22%;
 }
-
-.parte2orcamento {
-  gap: 30px;
-  display: flex;
-  
-}
-
-.parte1detalhes {
-  display: flex;
-  width: -webkit-fill-available;
-  align-items: center;
-  justify-content: center;
-}
-
-.parte2detalhes {
-  width: max-content;
-  display: flex;
-  gap: 40px;
-}
-
-.pageBreak {
-    margin: 0;
-    box-shadow: none;
-    page-break-after: always;
-}
-
-@media print {
-  .pageBreak {
-    margin: 0;
-    box-shadow: none;
-    page-break-after: always;
-  }
+.wwwparallelconnectcom {
+  left: 74.08%;
 }
